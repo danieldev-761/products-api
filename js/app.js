@@ -119,7 +119,9 @@
 
 import { getProducts } from './api/productsApi.js';
 import { renderProducts } from './ui/renderProducts.js';
+
 import { Pagination } from './classes/Pagination.js';
+import { renderPagination } from './ui/renderPagination.js';
 
 const productsContainer = document.getElementById('productsContainer');
 
@@ -139,39 +141,26 @@ async function loadProducts(){
 
     renderProducts(productsContainer, data.products);
 
-    currentPages.forEach(page => {
-        page.textContent = `
-            Page ${pagination.page} of ${pagination.totalPages}
-        `;
-    });
+    renderPagination(currentPages, pagination);
 
 }
 
 nextBtns.forEach(btn => {
+
     btn.addEventListener('click', async () => {
         pagination.nextPage();
-
         await loadProducts();
-
-        window.scrollTo({
-            top: 200,
-            behavior: 'smooth'
-        });
     });
 });
 
 prevBtns.forEach(btn => {
+
     btn.addEventListener('click', async () => {
         pagination.prevPage();
-
         await loadProducts();
-
-        window.scrollTo({
-            top: 200,
-            behavior: 'smooth'
-        });
     });
 });
+
 
 
 loadProducts();
