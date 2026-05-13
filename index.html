@@ -56,6 +56,13 @@
                     <button type="submit" class="bg-blue-600 px-6 rounded-xl text-white transition-opacity hover:opacity-80 cursor-pointer">
                         Buscar
                     </button>
+
+                    <button type="button"
+                        id="clearSearch"
+                        class="bg-zinc-500 px-6 rounded-xl text-white transition-opacity hover:opacity-80 cursor-pointer">
+                        Limpiar
+                    </button>
+
                 </form>
             </div>
         </section>
@@ -72,44 +79,47 @@
                 </span>
             </div>
 
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6" id="search-results">
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6" id="searchResults">
 
             
 
             </div>
         </section>
 
-        <div class="flex justify-center items-center gap-4 my-12">
+    
 
-            <button type="button" class="prevPage bg-blue-600 text-white px-4 py-2 rounded transition-opacity hover:opacity-80 cursor-pointer">
-                Anterior
-            </button>
+            <div class="flex justify-center items-center gap-4 my-12">
 
-            <span class="currentPage font-bold text-lg"></span>
+                <button type="button" class="prevPage bg-blue-600 text-white px-4 py-2 rounded transition-opacity hover:opacity-80 cursor-pointer">
+                    Anterior
+                </button>
 
-            <button type="button" class="nextPage bg-blue-600 text-white px-4 py-2 rounded transition-opacity hover:opacity-80 cursor-pointer">
-                Siguiente
-            </button>
-        </div>
+                <span class="currentPage font-bold text-lg"></span>
 
-        <section class="max-w-7xl mx-auto px-6 pb-12">
+                <button type="button" class="nextPage bg-blue-600 text-white px-4 py-2 rounded transition-opacity hover:opacity-80 cursor-pointer">
+                    Siguiente
+                </button>
+            </div>
 
-            <div class="grid grid-cols-4 gap-4" id="productsContainer"></div>
+            <section class="max-w-7xl mx-auto px-6 pb-12">
 
-        </section>
+                <div class="grid grid-cols-4 gap-4" id="productsContainer"></div>
 
-        <div class="flex justify-center items-center gap-4 my-8">
+            </section>
 
-            <button type="button" class="prevPage bg-blue-600 text-white px-4 py-2 rounded transition-opacity hover:opacity-80 cursor-pointer">
-                Anterior
-            </button>
+            <div class="flex justify-center items-center gap-4 my-8">
 
-            <span class="currentPage font-bold text-lg"></span>
+                <button type="button" class="prevPage bg-blue-600 text-white px-4 py-2 rounded transition-opacity hover:opacity-80 cursor-pointer">
+                    Anterior
+                </button>
 
-            <button type="button" class="nextPage bg-blue-600 text-white px-4 py-2 rounded transition-opacity hover:opacity-80 cursor-pointer">
-                Siguiente
-            </button>
-        </div>
+                <span class="currentPage font-bold text-lg"></span>
+
+                <button type="button" class="nextPage bg-blue-600 text-white px-4 py-2 rounded transition-opacity hover:opacity-80 cursor-pointer">
+                    Siguiente
+                </button>
+            </div>
+
 
     </main>
 
