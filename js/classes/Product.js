@@ -11,7 +11,7 @@ export class Product {
     renderCard(){
 
         return `
-            <div class="max-w-sm bg-white rounded-xl shadow-md overflow-hidden border border-gray-200">
+            <div class="max-w-sm bg-white rounded-xl shadow-md overflow-hidden border border-gray-200 on hover:shadow-lg transition-shadow duration-300">
 
                 <div class="h-56 bg-gray-200 flex items-center justify-center relative">
 
@@ -40,7 +40,7 @@ export class Product {
                             $${this.price}
                         </span>
 
-                        <button class="bg-black hover:bg-gray-800 text-white font-bold py-2 px-4 rounded-lg transition duration-200 cursor-pointer">
+                        <button class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-lg transition duration-200 cursor-pointer">
                             Comprar
                         </button>
                     </div>

@@ -119,15 +119,59 @@
 
 import { getProducts } from './api/productsApi.js';
 import { renderProducts } from './ui/renderProducts.js';
-
+import { Pagination } from './classes/Pagination.js';
 
 const productsContainer = document.getElementById('productsContainer');
 
+const nextBtns = document.querySelectorAll('.nextPage');
+const prevBtns = document.querySelectorAll('.prevPage');
+const currentPages = document.querySelectorAll('.currentPage');
+
+const pagination = new Pagination(20);
+
 async function loadProducts(){
 
-    const data = await getProducts(24, 0);
+    const data = await getProducts(
+        pagination.limit,
+        pagination.skip);
+
+    pagination.setTotal(data.total);
 
     renderProducts(productsContainer, data.products);
+
+    currentPages.forEach(page => {
+        page.textContent = `
+            Page ${pagination.page} of ${pagination.totalPages}
+        `;
+    });
+
 }
+
+nextBtns.forEach(btn => {
+    btn.addEventListener('click', async () => {
+        pagination.nextPage();
+
+        await loadProducts();
+
+        window.scrollTo({
+            top: 200,
+            behavior: 'smooth'
+        });
+    });
+});
+
+prevBtns.forEach(btn => {
+    btn.addEventListener('click', async () => {
+        pagination.prevPage();
+
+        await loadProducts();
+
+        window.scrollTo({
+            top: 200,
+            behavior: 'smooth'
+        });
+    });
+});
+
 
 loadProducts();
