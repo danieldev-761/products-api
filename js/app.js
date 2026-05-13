@@ -118,12 +118,20 @@
 // getProducts();
 
 import { getProducts } from './api/productsApi.js';
+import { Product } from './classes/Product.js';
 
-async function test(){
+const productsContainer = document.getElementById('productsContainer');
 
-    const data = await getProducts();
+async function loadProducts(){
 
-    console.log(data);
+    const data = await getProducts(24, 0);
+
+    for(let product of data.products){
+
+        const productCard = new Product(product);
+
+        productsContainer.innerHTML += productCard.renderCard();
+    }
 }
 
-test();
+loadProducts();
