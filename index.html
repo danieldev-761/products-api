@@ -46,82 +46,63 @@
 
     <main>
 
-            <!-- BUSCADOR -->
-    <section class="max-w-7xl mx-auto px-6 py-8">
-        <div class="flex gap-4">
-            <form class="flex gap-4 w-full" id="prd-search">
-                <input type="text" placeholder="Buscar producto..."
-                    class="flex-1 border border-zinc-700 rounded-xl px-4 py-3 outline-none focus:border-blue-500" />
+        <!-- BUSCADOR -->
+        <section class="max-w-7xl mx-auto px-6 py-8">
+            <div class="flex gap-4">
+                <form class="flex gap-4 w-full" id="prd-search">
+                    <input type="text" placeholder="Buscar producto..."
+                        class="flex-1 border border-zinc-700 rounded-xl px-4 py-3 outline-none focus:border-blue-500" />
 
-                <button type="submit" class="bg-blue-600 px-6 rounded-xl text-white transition-opacity hover:opacity-80 cursor-pointer">
-                    Buscar
-                </button>
-            </form>
-        </div>
-    </section>
+                    <button type="submit" class="bg-blue-600 px-6 rounded-xl text-white transition-opacity hover:opacity-80 cursor-pointer">
+                        Buscar
+                    </button>
+                </form>
+            </div>
+        </section>
 
-    <!-- RESULTADOS -->
-    <section class="max-w-7xl mx-auto px-6 pb-12">
-        <div class="flex items-center justify-between mb-6">
-            <h2 class="text-2xl font-bold">
-                Resultados
-            </h2>
+        <!-- RESULTADOS -->
+        <section class="max-w-7xl mx-auto px-6 pb-12">
+            <div class="flex items-center justify-between mb-6">
+                <h2 class="text-2xl font-bold">
+                    Resultados
+                </h2>
 
-            <span class="text-sm text-zinc-400">
-                <span id="quantity">0</span> Productos encontrados
-            </span>
-        </div>
-
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6" id="search-results">
-
-        
-
-        </div>
-    </section>
-
-    <section class="max-w-7xl mx-auto px-6 pb-12">
-
-        <div class="grid grid-cols-5 gap-3"" id="productsContainer"></div>
-                
-    <!--             
-                <div class="max-w-sm bg-white rounded-xl shadow-md overflow-hidden border border-gray-200">
-                    
-                
-                    <div class="h-56 bg-gray-200 flex items-center justify-center relative">
-                        <img src="https://unsplash.com" 
-                            alt="Producto" 
-                            class="w-full h-full object-cover">
-                        <span class="absolute top-2 left-2 bg-blue-600 text-white text-xs font-bold px-2 py-1 rounded">
-                            STOCK
-                        </span>
-                    </div>
-
-                
-                    <div class="p-5">
-                        <h3 class="text-gray-900 font-bold text-xl mb-2">Audífonos Premium</h3>
-                        <p class="text-gray-600 text-sm mb-4">
-                            Cancelación de ruido activa y hasta 40 horas de batería para tu música favorita.
-                        </p>
-
-                        <div class="flex items-center justify-between">
-                            <div>
-                                <span class="text-2xl font-bold text-emerald-600">$250.00</span>
-                            </div>
-                    
-                            <button class="bg-black hover:bg-gray-800 text-white font-bold py-2 px-4 rounded-lg transition duration-200">
-                                Comprar
-                            </button>
-                        </div>
-                    </div>
-                </div> -->
-
+                <span class="text-sm text-zinc-400">
+                    <span id="quantity">0</span> Productos encontrados
+                </span>
             </div>
 
-    </section>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6" id="search-results">
+
+            
+
+            </div>
+        </section>
+
+        <section class="max-w-7xl mx-auto px-6 pb-12">
+
+            <div class="grid grid-cols-5 gap-3" id="productsContainer"></div>
+
+        </section>
+
+        <div class="flex justify-center items-center gap-4 mt-10">
+
+            <button id="prevPage"
+                class="bg-black text-white px-4 py-2 rounded transition-opacity hover:opacity-80 cursor-pointer">
+                Anterior
+            </button>
+
+            <span id="pageInfo"></span>
+
+            <button id="nextPage"
+                class="bg-black text-white px-4 py-2 rounded transition-opacity hover:opacity-80 cursor-pointer">
+                Siguiente
+            </button>
+        </div>
 
     </main>
 
     <!-- Script principal -->
-    <script src="app.js"></script>
+    <script type="module" src="./js/app.js"></script>
 </body>
 </html>

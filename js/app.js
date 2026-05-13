@@ -22,7 +22,7 @@ async function searchProducts(text){
     const response = await fetch(`https://dummyjson.com/products/search?q=${text}`);
     const products = await response.json();
 
-    quantity.textContent = products.total_results;
+    quantity.textContent = products.products.length;
 
     searchResults.innerHTML = '';
 
@@ -78,14 +78,14 @@ async function getProducts(){
     console.log(products);
 
     for(let product of products.products){
-        const {title, images, price, description} = product;
+        const {title, thumbnail, price, description} = product;
 
         productsContainer.innerHTML += ` 
             <div class="max-w-sm bg-white rounded-xl shadow-md overflow-hidden border border-gray-200">
                 
                 <!-- Imagen -->
                 <div class="h-56 bg-gray-200 flex items-center justify-center relative">
-                    <img src="${images}" 
+                    <img src="${thumbnail}" 
                         alt="Producto" 
                         class="w-full h-full object-cover">
                     <span class="absolute top-2 left-2 bg-blue-600 text-white text-xs font-bold px-2 py-1 rounded">
