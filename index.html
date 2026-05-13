@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Catálogo de Productos</title>
+    <title>Products Catalogue</title>
     <!-- Tailwind CSS vía CDN -->
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 </head>
 <body>
 
     
-         <!-- Navbar -->
+        <!-- Navbar -->
         <nav class="bg-white shadow-sm border-b border-gray-200 sticky top-0 z-50">
             <div class="max-w-6xl mx-auto px-4">
                 <div class="flex justify-between items-center h-16">
@@ -24,19 +24,19 @@
 
                     <!-- Enlaces Desktop -->
                     <div class="hidden md:flex items-center space-x-8 text-gray-600 font-medium text-sm">
-                        <a href="#" class="hover:text-blue-600 transition-colors">Inicio</a>
-                        <a href="#" class="text-blue-600 border-b-2 border-blue-600 pb-1">Productos</a>
-                        <a href="#" class="hover:text-blue-600 transition-colors">Ofertas</a>
-                        <a href="#" class="hover:text-blue-600 transition-colors">Contacto</a>
+                        <a href="#" class="hover:text-blue-600 transition-colors">Home</a>
+                        <a href="#" class="text-blue-600 border-b-2 border-blue-600 pb-1">Products</a>
+                        <a href="#" class="hover:text-blue-600 transition-colors">Offers</a>
+                        <a href="#" class="hover:text-blue-600 transition-colors">Contact</a>
                     </div>
 
                     <!-- Carrito / Acceso -->
                     <div class="flex items-center gap-4">
                         <div class="relative cursor-pointer py-2">
-                            <span class="text-gray-700 font-bold text-sm">Carrito (0)</span>
+                            <span class="text-gray-700 font-bold text-sm">Cart (0)</span>
                         </div>
                         <button class="bg-gray-900 text-white text-sm px-4 py-2 rounded-lg hover:bg-gray-800 transition-colors">
-                            Mi Cuenta
+                            My Account
                         </button>
                     </div>
                 </div>
@@ -50,17 +50,17 @@
         <section class="max-w-7xl mx-auto px-6 py-8">
             <div class="flex gap-4">
                 <form class="flex gap-4 w-full" id="prd-search">
-                    <input type="text" placeholder="Buscar producto..."
+                    <input type="text" placeholder="Search product..."
                         class="flex-1 border border-zinc-700 rounded-xl px-4 py-3 outline-none focus:border-blue-500" />
 
                     <button type="submit" class="bg-blue-600 px-6 rounded-xl text-white transition-opacity hover:opacity-80 cursor-pointer">
-                        Buscar
+                        Search
                     </button>
 
                     <button type="button"
                         id="clearSearch"
                         class="bg-zinc-500 px-6 rounded-xl text-white transition-opacity hover:opacity-80 cursor-pointer">
-                        Limpiar
+                        Clear
                     </button>
 
                 </form>
@@ -71,11 +71,11 @@
         <section class="max-w-7xl mx-auto px-6 pb-12">
             <div class="flex items-center justify-between mb-6">
                 <h2 class="text-2xl font-bold">
-                    Resultados
+                    Results
                 </h2>
 
                 <span class="text-sm text-zinc-400">
-                    <span id="quantity">0</span> Productos encontrados
+                    <span id="quantity">0</span> Products found
                 </span>
             </div>
 
@@ -91,13 +91,13 @@
             <div class="flex justify-center items-center gap-4 my-12">
 
                 <button type="button" class="prevPage bg-blue-600 text-white px-4 py-2 rounded transition-opacity hover:opacity-80 cursor-pointer">
-                    Anterior
+                    Previous
                 </button>
 
                 <span class="currentPage font-bold text-lg"></span>
 
                 <button type="button" class="nextPage bg-blue-600 text-white px-4 py-2 rounded transition-opacity hover:opacity-80 cursor-pointer">
-                    Siguiente
+                    Next
                 </button>
             </div>
 
@@ -110,13 +110,13 @@
             <div class="flex justify-center items-center gap-4 my-8">
 
                 <button type="button" class="prevPage bg-blue-600 text-white px-4 py-2 rounded transition-opacity hover:opacity-80 cursor-pointer">
-                    Anterior
+                    Previous
                 </button>
 
                 <span class="currentPage font-bold text-lg"></span>
 
                 <button type="button" class="nextPage bg-blue-600 text-white px-4 py-2 rounded transition-opacity hover:opacity-80 cursor-pointer">
-                    Siguiente
+                    Next
                 </button>
             </div>
 
